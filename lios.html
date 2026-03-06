@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIOS Timer Hub</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #111; color: white; text-align: center; margin: 0; padding-bottom: 30px; }
+        h1 { background: #333; color: #f1c40f; padding: 15px; margin: 0; font-size: 20px; text-transform: uppercase; }
+        
+        /* 🔥 मुकेश भाई, यहाँ खाली जगह भरने के लिए नया लोगो और टेक्स्ट 🔥 */
+        .header-logo { padding: 30px; background: #1a1a1a; border-bottom: 2px solid #333; }
+        .skull-icon { font-size: 60px; color: #e74c3c; margin-bottom: 10px; }
+        .logo-text { font-size: 24px; color: #f1c40f; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .tagline { color: #888; font-size: 14px; margin-top: 5px; }
+
+        .container { padding: 10px; }
+        .section-header { color: #f1c40f; font-weight: bold; margin: 25px 0 10px; font-size: 16px; text-align: center; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        
+        .btn { border: none; padding: 18px; color: white; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; transition: 0.2s; }
+        .btn:active { transform: scale(0.95); opacity: 0.8; }
+
+        /* Card Colors */
+        .btn-green { background: #27ae60; border: 1px solid #2ecc71; }
+        .btn-blue { background: #2980b9; border: 1px solid #3498db; }
+        .btn-purple { background: #8e44ad; border: 1px solid #9b59b6; }
+
+        /* Room Colors (Darker tone) */
+        .btn-green-dark { background: #1e8449; border: 1px solid #27ae60; }
+        .btn-blue-dark { background: #21618c; border: 1px solid #2980b9; }
+        .btn-purple-dark { background: #6c3483; border: 1px solid #8e44ad; }
+
+        /* Boss Style - Full Width */
+        .btn-boss { background: #e74c3c; grid-column: span 2; padding: 20px; margin-bottom: 5px; border: 1px solid #c0392b; font-size: 15px; }
+        
+        small { display: block; font-size: 11px; opacity: 0.8; margin-top: 4px; font-weight: normal; }
+    </style>
+</head>
+<body>
+    
+    <div class="header-logo">
+        <div class="skull-icon">💀</div>
+        <div class="logo-text">MUKESH GAMING HUB</div>
+        <div class="tagline">SELECT YOUR TARGET | START THE TIMER</div>
+    </div>
+
+    <h1>🎮 LIOS TIMER HUB 🎮</h1>
+    
+    <div class="container">
+        
+        <div class="section-header">Cards</div>
+        <div class="grid">
+            <button class="btn btn-green" onclick="sendTimer('.greencard')">Green Card<small>10 MIN</small></button>
+            <button class="btn btn-blue" onclick="sendTimer('.bluecard')">Blue Card<small>2 HR</small></button>
+            <button class="btn btn-purple" onclick="sendTimer('.purplecard')">Purple Card<small>3 HR</small></button>
+        </div>
+
+        <div class="section-header">Rooms</div>
+        <div class="grid">
+            <button class="btn btn-green-dark" onclick="sendTimer('.greenroom')">Green Room<small>45 MIN</small></button>
+            <button class="btn btn-blue-dark" onclick="sendTimer('.blueroom')">Blue Room<small>1 HOUR</small></button>
+            <button class="btn btn-purple-dark" onclick="sendTimer('.purpleroom')">Purple Room<small>2 HOURS</small></button>
+        </div>
+
+        <div class="section-header">Bosses</div>
+        <div class="grid">
+            <button class="btn btn-boss" onclick="sendTimer('.tank')">🚀 TANK (6 HR)</button>
+            <button class="btn btn-boss" onclick="sendTimer('.avenger')">💀 AVENGER (6 HR)</button>
+            <button class="btn btn-boss" onclick="sendTimer('.heli')">🚁 HELI (6 HR)</button>
+        </div>
+
+    </div>
+
+    <script>
+        function sendTimer(cmd) {
+            // मुकेश भाई, यहाँ आपका नंबर आएगा, मैसेज इसी पर आएगा
+            const myNumber = "919001749912";
+            const url = "https://wa.me/" + myNumber + "?text=" + encodeURIComponent(cmd);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
+
